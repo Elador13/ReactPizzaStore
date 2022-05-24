@@ -1,8 +1,8 @@
 import React from 'react';
 import Dough from "./Dough/Dough";
-import Diameter from "./Diameter/Diameter";
+import Size from "./Size/Size";
 import Ingredients from "./Ingredients/Ingredients";
-import Pizza from "../Pizza/Pizza";
+import Pizza from "./Pizza/Pizza";
 // import './PizzaConstructor.scss'
 
 const PizzaConstructor = () => {
@@ -15,7 +15,7 @@ const PizzaConstructor = () => {
 
           <Dough/>
 
-          {/*<Diameter/>*/}
+          <Size/>
 
           {/*<Ingredients/>*/}
 

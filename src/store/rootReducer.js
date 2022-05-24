@@ -1,6 +1,8 @@
 import {combineReducers} from "redux";
 import {doughReducer} from "./reducers/doughReducer";
+import {sizeReducer} from "./reducers/sizeReducer";
 
 export const rootReducer = combineReducers({
-  doughReducer
+  dough: doughReducer,
+  size: sizeReducer
 })
