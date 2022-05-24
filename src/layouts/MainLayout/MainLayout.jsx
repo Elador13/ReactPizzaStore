@@ -1,9 +1,14 @@
 import React from 'react';
 import Header from "./Header/Header";
+import PizzaConstructor from "./PizzaConstructor/PizzaConstructor";
 
 const MainLayout = () => {
   return (
-    <Header/>
+    <>
+      <Header/>
+      <PizzaConstructor/>
+    </>
+
   );
 };
 
