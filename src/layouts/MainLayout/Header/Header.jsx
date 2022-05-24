@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.png'
+import logo from './logo2.png'
 // import style from './Header.module.scss'
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
         <a href="cart.html">0 $</a>
       </div>
       <div className='header__user'>
-        <a href="#" className='header__login'><span>Войти</span></a>
+        <a href="#" className='header__login'><span>Sign in</span></a>
       </div>
     </header>
 );
