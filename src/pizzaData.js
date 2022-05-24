@@ -28,3 +28,82 @@ export const sizeTypes = [
     value: "big",
   },
 ];
+
+export const ingredientsTypes = [
+  {
+    label: "Mushrooms",
+    value: "mushrooms",
+    price: 20,
+  },
+  {
+    label: "Cheddar",
+    value: "cheddar",
+    price: 20,
+  },
+  {
+    label: "Salami",
+    value: "salami",
+    price: 20,
+  },
+  {
+    label: "Ham",
+    value: "ham",
+    price: 15,
+  },
+  {
+    label: "Pineapple",
+    value: "pineapple",
+    price: 20,
+  },
+  {
+    label: "Bacon",
+    value: "bacon",
+    price: 20,
+  },
+  {
+    label: "Onion",
+    value: "onion",
+    price: 5,
+  },
+  {
+    label: "Chile",
+    value: "chile",
+    price: 30,
+  },
+  {
+    label: "Jalapeno",
+    value: "jalapeno",
+    price: 20,
+  },
+  {
+    label: "Olives",
+    value: "olives",
+    price: 20,
+  },
+  {
+    label: "Tomatoes",
+    value: "tomatoes",
+    price: 10,
+  },
+  {
+    label: "Salmon",
+    value: "salmon",
+    price: 40,
+  },
+  {
+    label: "Mozzarella",
+    value: "mozzarella",
+    price: 30,
+  },
+  {
+    label: "Parmesan",
+    value: "parmesan",
+    price: 30,
+  },
+  {
+    label: "Blue cheese",
+    value: "blue_cheese",
+    price: 50,
+  },
+];
+

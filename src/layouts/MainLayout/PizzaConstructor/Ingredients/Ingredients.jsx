@@ -4,7 +4,7 @@ const Ingredients = () => {
   return (
     <div className="content__ingridients">
       <div className="sheet">
-        <h2 className="title title--small sheet__title">Выберите ингридиенты</h2>
+        <h2 className="title title--small sheet__title">Choose ingredients</h2>
 
         <div className="sheet__content ingridients">
 

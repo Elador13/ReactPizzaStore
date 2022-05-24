@@ -4,8 +4,8 @@ const Pizza = () => {
   return (
     <div className="content__pizza">
       <label className="input">
-        <span className="visually-hidden">Название пиццы</span>
-        <input type="text" name="pizza_name" placeholder="Введите название пиццы"/>
+        <span className="visually-hidden">Pizza name</span>
+        <input type="text" name="pizza_name" placeholder="Enter your pizza name"/>
       </label>
 
       <div className="content__constructor">
@@ -19,8 +19,8 @@ const Pizza = () => {
           </div>
 
           <div className="content__result">
-            <p>Итого: 0 ₽</p>
-            <button type="button" className="button button--disabled" disabled>Готовьте!</button>
+            <p>Total: 0 $</p>
+            <button type="button" className="button button--disabled" disabled>Сook it!</button>
           </div>
         </div>
       </div>

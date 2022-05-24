@@ -17,9 +17,9 @@ const PizzaConstructor = () => {
 
           <Size/>
 
-          {/*<Ingredients/>*/}
+          <Ingredients/>
 
-          {/*<Pizza/>*/}
+          <Pizza/>
 
         </div>
       </form>
