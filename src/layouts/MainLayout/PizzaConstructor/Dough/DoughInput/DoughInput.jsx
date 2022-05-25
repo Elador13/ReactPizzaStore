@@ -1,11 +1,12 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setDough } from "../../../../../store/reducers/doughReducer";
+import { useDispatch } from "react-redux";
+import {setDough} from "../../../../../store/reducers/pizzaConstructorReducer";
 
-const DoughInput = ({ value, title, subtitle, className }) => {
+
+const DoughInput = ({ value, title, subtitle, className, selectedDough }) => {
   const dispatch = useDispatch();
 
-  const doughData = useSelector((state) => state.dough);
+  // const doughData = useSelector((state) => state.pizzaConstructor.selectedDough);
 
   const changeHandler = (event) => {
     dispatch(setDough(event.target.value));
@@ -18,7 +19,7 @@ const DoughInput = ({ value, title, subtitle, className }) => {
         type="radio"
         name="dough"
         value={value}
-        checked={value === doughData.selectedDough}
+        checked={value === selectedDough}
         className="visually-hidden"
       />
       <b>{title}</b>

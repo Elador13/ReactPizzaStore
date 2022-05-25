@@ -1,11 +1,9 @@
 import React from "react";
-import { sizeTypes } from "../../../../pizzaData";
-import {useDispatch, useSelector} from "react-redux";
-import {setSize} from "../../../../store/reducers/sizeReducer";
+import {useDispatch} from "react-redux";
+import {setSize} from "../../../../store/reducers/pizzaConstructorReducer";
 
-const Size = () => {
+const Size = ({sizeTypes, selectedSize}) => {
   const dispatch = useDispatch()
-  const sizeData = useSelector(state => state.size)
 
   const changeHandler = (event) => {
     dispatch(setSize(event.target.value));
@@ -21,7 +19,7 @@ const Size = () => {
         type="radio"
         name="diameter"
         value={size.value}
-        checked={size.value === sizeData.selectedSize}
+        checked={size.value === selectedSize}
         className="visually-hidden"
       />
       <span>{size.label}</span>
