@@ -1,9 +1,11 @@
-import {FETCH_PIZZA_DATA, SET_DOUGH, SET_SIZE, TOGGLE_LOADING} from "./types";
+import {FETCH_PIZZA_DATA, SET_DOUGH, SET_INGREDIENT, SET_SAUCE, SET_SIZE, TOGGLE_LOADING} from "./types";
 
 const initialState = {
   loading: true,
   selectedDough: 'light',
   selectedSize: 'normal',
+  selectedSauce: 'tomato',
+  selectedIngredients: [],
   doughTypes: [],
   sizeTypes: [],
   sauceTypes: [],
@@ -15,7 +17,8 @@ export const pizzaConstructorReducer = (state = initialState, action) => {
     case FETCH_PIZZA_DATA: {
       return {
         ...state,
-        ...action.data
+        ...action.data,
+        ingredientsTypes: action.data.ingredientsTypes.map(ingr => ({...ingr, count: 0}))
       }
     }
     case SET_DOUGH: {
@@ -28,6 +31,18 @@ export const pizzaConstructorReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedSize: action.size
+      }
+    }
+    case SET_SAUCE: {
+      return {
+        ...state,
+        selectedSauce: action.sauce
+      }
+    }
+    case SET_INGREDIENT: {
+      return {
+        ...state,
+        selectedSauce: action.sauce
       }
     }
     case TOGGLE_LOADING: {
@@ -43,6 +58,7 @@ export const pizzaConstructorReducer = (state = initialState, action) => {
 //Action-creators:
 export const setDough = (dough) => ({type: SET_DOUGH, dough})
 export const setSize = (size) => ({type: SET_SIZE, size})
+export const setSauce = (sauce) => ({type: SET_SAUCE, sauce})
 export const toggleLoading = (boolean) => ({type: TOGGLE_LOADING, boolean})
 
 //Thunks:

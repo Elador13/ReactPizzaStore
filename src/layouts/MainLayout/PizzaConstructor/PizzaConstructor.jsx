@@ -4,6 +4,7 @@ import Size from "./Size/Size";
 import Spinner from "../../../components/Spinner/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPizzaData } from "../../../store/reducers/pizzaConstructorReducer";
+import Ingredients from "./Ingredients/Ingredients";
 
 const PizzaConstructor = () => {
   const dispatch = useDispatch();
@@ -23,11 +24,22 @@ const PizzaConstructor = () => {
           <div className="content__wrapper">
             <h1 className="title title--big">Pizza Constructor</h1>
 
-            <Dough doughTypes={pizzaData.doughTypes} selectedDough={pizzaData.selectedDough}/>
+            <Dough
+              doughTypes={pizzaData.doughTypes}
+              selectedDough={pizzaData.selectedDough}
+            />
 
-            <Size sizeTypes={pizzaData.sizeTypes} selectedSize={pizzaData.selectedSize}/>
+            <Size
+              sizeTypes={pizzaData.sizeTypes}
+              selectedSize={pizzaData.selectedSize}
+            />
 
-            {/*<Ingredients/>*/}
+            <Ingredients
+              ingredientsTypes={pizzaData.ingredientsTypes}
+              selectedIngredients={pizzaData.selectedIngredients}
+              sauceTypes={pizzaData.sauceTypes}
+              selectedSauce={pizzaData.selectedSauce}
+            />
 
             {/*<Pizza/>*/}
           </div>
