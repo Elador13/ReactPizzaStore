@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 class SingleIngredient extends Component {
-  changeHandler = () => {
-    console.log('change ingr.')
-  };
 
   render() {
     const {value, label, count} = this.props.ingredient
@@ -16,23 +13,27 @@ class SingleIngredient extends Component {
 
         <div className="counter counter--orange ingridients__counter">
           <button
+            disabled={count === 0}
+            onClick={() => this.props.onChange(count - 1)}
             type="button"
-            className="counter__button counter__button--disabled counter__button--minus"
+            className={`counter__button counter__button--minus${count === 0 ? '--disabled' : ''}`}
           >
-            <span className="visually-hidden">Меньше</span>
+            <span className="visually-hidden">Less</span>
           </button>
           <input
-            onChange={this.changeHandler}
+            onChange={e => this.props.onChange(parseInt(e.target.value))}
             type="text"
             name="counter"
             className="counter__input"
             value={count}
           />
           <button
+            disabled={count === 3}
+            onClick={() => this.props.onChange(count + 1)}
             type="button"
-            className="counter__button counter__button--plus"
+            className={`counter__button counter__button--plus${count === 3 ? '--disabled' : ''}`}
           >
-            <span className="visually-hidden">Больше</span>
+            <span className="visually-hidden">More</span>
           </button>
         </div>
       </li>

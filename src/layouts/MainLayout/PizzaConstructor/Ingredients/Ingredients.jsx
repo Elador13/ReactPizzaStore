@@ -1,13 +1,20 @@
 import React from "react";
 import SingleIngredient from "./SingleIngredient";
 import Sauce from "./Sauce/Sauce";
+import {connect} from "react-redux";
+import {setIngredientCount} from "../../../../store/reducers/pizzaConstructorReducer";
 
 class Ingredients extends React.Component {
 
-  handleChange = () => {}
+  handleChange = (title, count) => {
+    //TODO: Lazy input
+    if (isNaN(count) || count < 0) count = 0
+    if (count > 3) count = 3
+    this.props.setIngredientCount(title, count)
+  };
 
   render() {
-    const { ingredientsTypes, selectedIngredients, sauceTypes, selectedSauce } =
+    const { ingredientsTypes, sauceTypes, selectedSauce } =
       this.props;
 
     return (
@@ -26,9 +33,9 @@ class Ingredients extends React.Component {
               <ul className="ingridients__list">
                 {ingredientsTypes.map((ingr) => (
                   <SingleIngredient
+                    onChange={(e) => this.handleChange(ingr.value, e)}
                     key={ingr.value}
                     ingredient={ingr}
-                    selectedIngredients={selectedIngredients}
                   />
                 ))}
               </ul>
@@ -40,4 +47,8 @@ class Ingredients extends React.Component {
   }
 }
 
-export default Ingredients;
+
+
+export default connect(() => ({}), {
+  setIngredientCount
+})(Ingredients);

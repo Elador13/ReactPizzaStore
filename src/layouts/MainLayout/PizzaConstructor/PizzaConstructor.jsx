@@ -34,9 +34,9 @@ const PizzaConstructor = () => {
               selectedSize={pizzaData.selectedSize}
             />
 
+            {/*Class component*/}
             <Ingredients
               ingredientsTypes={pizzaData.ingredientsTypes}
-              selectedIngredients={pizzaData.selectedIngredients}
               sauceTypes={pizzaData.sauceTypes}
               selectedSauce={pizzaData.selectedSauce}
             />
