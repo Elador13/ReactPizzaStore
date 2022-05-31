@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Total from "./Total";
 
 const Pizza = ({ pizzaData }) => {
-  const { ingredientsTypes, selectedDough, selectedSauce } = pizzaData;
+  const { ingredientsTypes, selectedDough, selectedSauce, selectedSize } =
+    pizzaData;
 
   const dough = selectedDough === "large" ? "big" : "small";
 
@@ -53,13 +55,10 @@ const Pizza = ({ pizzaData }) => {
         </div>
       </div>
 
-      <div className="content__result">
-        <p>Total: 0 $</p>
-        <button type="button" className="button button--disabled" disabled>
-          Сook it!
-        </button>
-      </div>
-
+      <Total
+        selectedIngredients={selectedIngredients}
+        selectedSize={selectedSize}
+      />
     </div>
   );
 };
