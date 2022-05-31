@@ -5,6 +5,7 @@ import Spinner from "../../../components/Spinner/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPizzaData } from "../../../store/reducers/pizzaConstructorReducer";
 import Ingredients from "./Ingredients/Ingredients";
+import Pizza from "./Pizza/Pizza";
 
 const PizzaConstructor = () => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const PizzaConstructor = () => {
               selectedSauce={pizzaData.selectedSauce}
             />
 
-            {/*<Pizza/>*/}
+            <Pizza pizzaData={pizzaData}/>
           </div>
         </form>
       )}
